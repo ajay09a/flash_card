@@ -3,6 +3,7 @@
 import { useState } from "react";
 import FlashCard from "./components/FlashCard";
 import { cards } from "./data/cards";
+import ProgressBar from "./components/ProgressBar";
 
 export default function Home(){
   const [index, setIndex] = useState(0);
@@ -19,6 +20,7 @@ export default function Home(){
   };
   return (
     <main className="main">
+      <ProgressBar current={index} total={cards.length}/>
       <FlashCard
       question = {cards[index].question}
       answer = {cards[index].answer}
