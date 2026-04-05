@@ -19,14 +19,14 @@ export default function Home(){
     }
   };
   return (
-    <main className="main">
+    <main className="container">
       <ProgressBar current={index} total={cards.length}/>
       <FlashCard
       question = {cards[index].question}
       answer = {cards[index].answer}
       />
       <div className="buttons">
-        <button onClick={prevCard} className="preBtn">Prev</button>
+        <button onClick={prevCard} className="prevBtn">Prev</button>
         <button onClick={nextCard} className="nextBtn">Next</button>
       </div>
     </main>

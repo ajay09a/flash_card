@@ -7,7 +7,7 @@ export default function FlashCard({question, answer}: any){
     return(
         <div
         onClick={()=>setFlipped(!flipped)}
-        className="outer-box">
+        className="card">
             <p className="inner-box">{flipped ? answer : question}</p>
         </div>
     )
