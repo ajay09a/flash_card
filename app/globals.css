@@ -51,14 +51,30 @@ button {
 }
 
 .progress-bar {
-  width: 300px;
-  height: 8px;
+  width: 400px;
+  height: 12px;
   background: #eee;
   border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .progress-percentage {
   height: 100%;
   background: #0070f3;
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
+  transition: width 0.3s ease;
+}
+
+.progress-text{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: black;           /* or white if you want it on the blue */
+  line-height: 24px;      /* same as container height for vertical centering */
+  pointer-events: none;
 }
